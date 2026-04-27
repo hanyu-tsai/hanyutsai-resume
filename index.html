@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Han-Yu (Sylvia) Tsai | The Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+        :root {
+            --vogue-black: #000000;
+            --vogue-white: #ffffff;
+            --vogue-grey: #f4f4f4;
+            --accent-red: #c0392b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--vogue-white);
+            color: var(--vogue-black);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Logo --- */
+        header {
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #000;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 40px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        nav a { text-decoration: none; color: #000; transition: 0.3s; }
+        nav a:hover { color: var(--accent-red); }
+
+        /* --- Hero Section --- */
+        #hero {
+            padding: 120px 10%;
+            text-align: center;
+            background-color: var(--vogue-grey);
+        }
+
+        #hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #444;
+        }
+
+        /* --- Sections --- */
+        section { padding: 100px 10%; }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 80px;
+            letter-spacing: 4px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #000;
+            margin: 20px auto;
+        }
+
+        /* --- Grid Layout --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .card {
+            border-top: 1px solid #000;
+            padding-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .card h4 {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: var(--accent-red);
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .date { font-size: 0.8rem; color: #888; display: block; margin-bottom: 10px; }
+
+        /* --- Skills (Dark Section) --- */
+        .skills-section {
+            background: #000;
+            color: #fff;
+            padding: 100px 10%;
+        }
+
+        .skills-section .section-title { color: #fff; }
+        .skills-section .section-title::after { background: #fff; }
+
+        .skill-group { margin-bottom: 40px; }
+        .skill-group h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--accent-red); margin-bottom: 10px; }
+
+        footer {
+            padding: 60px;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-top: 1px solid #000;
+        }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 2rem; }
+            #hero h1 { font-size: 3rem; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SYLVIA TSAI</div>
+        <nav>
+            <ul>
+                <li><a href="#about">The Profile</a></li>
+                <li><a href="#experience">The Career</a></li>
+                <li><a href="#projects">The Works</a></li>
+                <li><a href="#skills">The Talents</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Psychology<br>& Insights</h1>
+        <p>"The future of operations is human. A fusion of behavioral science and organizational efficiency."</p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">Academic Background</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>UC San Diego</h3>
+                <h4>B.A. Psychology</h4>
+                <span class="date">Expected June 2026</span>
+                <p>Decoding cognitive patterns and human behavior at a top-tier research institution. Current GPA: 3.6</p>
+            </div>
+            <div class="card">
+                <h3>Irvine Valley College</h3>
+                <h4>A.A. Psychology</h4>
+                <span class="date">2023 - 2024</span>
+                <p>Mastering the foundations of psychology with absolute academic excellence. GPA: 4.0</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="card">
+            <span class="date">Sep 2025 - Feb 2026</span>
+            <h3>Outreach & Marketing Intern</h3>
+            <h4>Bea Better Eating (Mental Health Startup)</h4>
+            <p>Orchestrated community engagement and tailored communication strategies for sensitive mental health narratives.</p>
+            <p>Collected and analyzed user feedback data to identify patterns and improve engagement strategies.</p>
+            <p>Adapted messaging for different audiences, improving participation in sensitive-topic discussions.</p>
+        </div>
+        <div class="card">
+            <span class="date">Apr 2026 - Present</span>
+            <h3>ICU Operations Specialist (Volunteer)</h3>
+            <h4>Scripps Health, San Diego</h4>
+            <p>Navigating the high-stakes environment of the Intensive Care Unit (ICU), bridging clinical needs with administrative precision.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">The Research Files</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Research Lead</h3>
+                <p>Directing a 10-member ensemble to analyze behavioral factors in psychology. Published in Vol. 4, Issue 1.</p>
+            </div>
+            <div class="card">
+                <h3>UX Case Studies</h3>
+                <p>Re-imagining Ticketmaster and Instagram interfaces through a psychological lens for maximum user transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="skills-section" id="skills">
+        <h2 class="section-title">Technique & Talent</h2>
+        <div class="grid-container">
+            <div class="skill-group">
+                <h3>Data Science</h3>
+                <p>SPSS, Python, Excel, Google Sheets, Behavioral Data Interpretation</p>
+            </div>
+            <div class="skill-group">
+                <h3>Design Strategy</h3>
+                <p>Figma, Canva, User Research, Consumer Insight, ChatGPT/Gemini Optimization</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 50px; font-style: italic;">
+            English (Fluent) / Mandarin Chinese (Native)
+        </div>
+    </div>
+
+    <footer>
+        SYLVIA TSAI | SAN DIEGO, CALIFORNIA | 949.293.3216 <br>
+        ALL RIGHTS RESERVED &copy; 2026
+    </footer>
+</body>
+</html>
